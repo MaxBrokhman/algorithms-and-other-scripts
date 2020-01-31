@@ -20,5 +20,5 @@ const quickSort2 = (arr) => {
             more.push(item);
         }
     });
-    return quickSort(less).concat(pivot.concat(quickSort(more)));
+    return quickSort2(less).concat(pivot.concat(quickSort2(more)));
 };
