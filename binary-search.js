@@ -25,3 +25,11 @@ const binarySearch = (arr, val) => {
 
     return mid;
 }
+
+const binarySearch2 = (value, arr, min = 0, max = arr.length - 1) => {
+	let mid = Number(((min + max) / 2).toFixed(0))
+	let guess = arr[mid]
+	if(guess === value) return mid
+	if(value < arr[mid]) return binarySearch2(value, arr, min, mid - 1)
+	if(value > arr[mid]) return binarySearch2(value, arr, mid + 1, max)
+}
