@@ -14,4 +14,4 @@ const fib2 = (n) => {
   return nextVal;
 }
 
-const fib3 = (n, f = 0, s = 1) => n === 0 ? f : fib(n-1, s, f + s)
+const fib3 = (n, f = 0, s = 1) => n === 0 ? f : fib3(n-1, s, f + s)
